@@ -18,13 +18,12 @@ int main(){
             printf("Bucket buffer size : %d out of %d\n", store, buck_size);
         }
 
-        if(store>=outgoing){
-            store=outgoing-store;
+        if(store >= outgoing){
+            store = store - outgoing;
+        } else {
+            store = 0;
         }
 
-        if(store<0){
-            store=store*(-1);
-        }
         printf("After outgoing , There are %d out of %d packets left in buffer\n", store, buck_size);
         n--;
     }
