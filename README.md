@@ -11,5 +11,6 @@ KTU S6 CSL 332 NETWORKING LAB Programs [2019 Scheme]
 | 3 | TCP Socket programming |
 |   | TCP - Palindrome or Not |
 | 4 | UDP Socket programming |
+| 5 | Leaky Bucket  |
 
 **Programs or Program name may vary according to colleges**
