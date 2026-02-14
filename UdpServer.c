@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
             break;
         }       
 
-        printf("Enter a message to be sent to server: ");
+        printf("Enter a message to be sent to client: ");
         fgets(buffer, 100, stdin);
 
         if (sendto(sockfd, buffer, sizeof(buffer), 0, (struct sockaddr*)&server, sizeof(server)) < 0) {
