@@ -12,7 +12,7 @@ KTU S6 CSL 332 NETWORKING LAB Programs [2019 Scheme]
 |   | TCP - Palindrome or Not |
 | 4 | UDP Socket programming |
 | 5 | Leaky Bucket  |
-| 5 | Stop and Wait Protocol  |
-| 5 | Distance vector Routing Algorithm |
+| 6 | Stop and Wait Protocol  |
+| 7 | Distance vector Routing Algorithm |
 
 **Programs or Program name may vary according to colleges**
