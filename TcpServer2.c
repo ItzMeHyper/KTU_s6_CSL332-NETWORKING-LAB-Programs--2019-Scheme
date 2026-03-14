@@ -27,6 +27,7 @@ int main() {
     printf("Client connected\n");
 
     while (1) {
+        bzero(buffer, MAX);
         read(connfd, buffer, MAX);
         printf("Client: %s", buffer);
 

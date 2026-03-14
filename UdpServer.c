@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <string.h>
-#include <sys/socket.h>
 #include <stdlib.h>
+#include <string.h>
 #include <netdb.h>
+#include <sys/socket.h>
 
 int main(int argc, char* argv[]) {
     struct sockaddr_in server, client;
