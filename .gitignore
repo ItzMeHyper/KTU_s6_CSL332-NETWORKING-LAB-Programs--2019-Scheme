@@ -3,5 +3,3 @@ Test/
 *.out
 *s
 *c
-*.o
-*.a
