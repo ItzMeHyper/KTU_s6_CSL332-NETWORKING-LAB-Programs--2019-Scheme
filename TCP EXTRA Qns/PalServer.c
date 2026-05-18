@@ -29,7 +29,6 @@ int main() {
 
     while (1) {
         bzero(buffer, MAX);
-
         read(connfd, buffer, MAX);
 
         buffer[strcspn(buffer, "\n")] = '\0';

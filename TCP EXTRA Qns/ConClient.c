@@ -19,7 +19,6 @@ int main() {
     server.sin_port = htons(PORT);
 
     connect(sockfd, (struct sockaddr*)&server, sizeof(server));
-
     printf("Connected to server\n");
 
     while (1) {
@@ -34,7 +33,6 @@ int main() {
         }
         
         read(sockfd, buffer, MAX);
-
         printf("Condensed Number: %s\n", buffer);
     }
 

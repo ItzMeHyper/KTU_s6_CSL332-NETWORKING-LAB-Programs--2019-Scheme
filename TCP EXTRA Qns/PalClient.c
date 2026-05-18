@@ -19,7 +19,6 @@ int main() {
     server.sin_port = htons(PORT);
 
     connect(sockfd, (struct sockaddr*)&server, sizeof(server));
-
     printf("Connected to server\n");
 
     while (1) {

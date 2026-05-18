@@ -19,22 +19,21 @@ int main() {
     server.sin_port = htons(PORT);
 
     connect(sockfd, (struct sockaddr*)&server, sizeof(server));
-
     printf("Connected to server\n");
 
     while (1) {
         printf("Client: ");
-        fgets(buffer, MAX, stdin);
+        fgets(sockfd, buffer, MAX);
 
         write(sockfd, buffer, MAX);
-
-        read(sockfd, buffer, MAX);
-        printf("Server: %s", buffer);
 
         if (strncmp(buffer, "exit", 4) == 0){
             printf("Exitted Successfully!\n");
             break;
         }
+        
+        read(sockfd, buffer, MAX);
+        printf("Server: %s", buffer);
     }
 
     close(sockfd);

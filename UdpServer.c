@@ -5,12 +5,14 @@
 #include <sys/socket.h>
 
 int main(int argc, char* argv[]) {
+    int sockfd;
     struct sockaddr_in server, client;
+    char buffer[100];
 
     if (argc != 2)
         printf("Input format not correct");
 
-    int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+    sockfd = socket(AF_INET, SOCK_DGRAM, 0);
     if (sockfd == -1)
         printf("Error in socket();");
 
@@ -21,7 +23,6 @@ int main(int argc, char* argv[]) {
     if (bind(sockfd, (struct sockaddr*)&server, sizeof(server)) < 0)
         printf("Error in blind()! \n");
 
-    char buffer[100];
     socklen_t server_len = sizeof(server);
 
     while (1) {

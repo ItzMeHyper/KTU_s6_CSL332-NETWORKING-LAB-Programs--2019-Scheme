@@ -20,7 +20,6 @@ int main() {
 
     bind(sockfd, (struct sockaddr*)&server, sizeof(server));
     listen(sockfd, 1);
-
     printf("Server waiting...\n");
 
     connfd = accept(sockfd, NULL, NULL);

@@ -5,12 +5,14 @@
 #include <sys/socket.h>
 
 int main(int argc, char* argv[]) {
+    int sockfd;
     struct sockaddr_in server, client;
+    char buffer[100];
 
     if (argc != 3)
         printf("Input format not correct");
 
-    int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+    sockfd = socket(AF_INET, SOCK_DGRAM, 0);
     if (sockfd == -1)
         printf("Error in socket();");
 
@@ -18,7 +20,6 @@ int main(int argc, char* argv[]) {
     server.sin_addr.s_addr = INADDR_ANY;
     server.sin_port = htons(atoi(argv[2]));
 
-    char buffer[100];
     while(1){
         printf("Enter a message to be sent to server: ");
         fgets(buffer, 100, stdin);
@@ -26,8 +27,7 @@ int main(int argc, char* argv[]) {
         if (sendto(sockfd, buffer, sizeof(buffer), 0, (struct sockaddr*)&server, sizeof(server)) < 0) {
             printf("Error in sendto");
         }
-        
-        // Exit condition
+
         if (strncmp(buffer, "exit", 4) == 0){
             printf("Exitted Successfully!\n");
             break;
