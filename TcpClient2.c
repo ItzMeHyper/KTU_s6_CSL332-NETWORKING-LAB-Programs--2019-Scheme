@@ -23,7 +23,7 @@ int main() {
 
     while (1) {
         printf("Client: ");
-        fgets(sockfd, buffer, MAX);
+        fgets(buffer, MAX, stdin);
 
         write(sockfd, buffer, MAX);
 
