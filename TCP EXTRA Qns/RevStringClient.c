@@ -8,7 +8,6 @@
 #define MAX 100
 
 int main() {
-
     int sockfd;
     struct sockaddr_in server;
     char buffer[MAX];
@@ -20,7 +19,6 @@ int main() {
     server.sin_port = htons(PORT);
 
     connect(sockfd, (struct sockaddr*)&server, sizeof(server));
-
     printf("Connected to server\n");
 
     while (1) {

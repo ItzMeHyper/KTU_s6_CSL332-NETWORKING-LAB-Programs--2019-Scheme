@@ -25,8 +25,7 @@ int main(int argc, char* argv[]) {
     server.sin_addr.s_addr = INADDR_ANY;
     server.sin_port = htons(atoi(argv[1]));
 
-    if (bind(sockfd, (struct sockaddr*)&server, sizeof(server)) < 0)
-        printf("Error in blind()! \n");
+    bind(sockfd, (struct sockaddr*)&server, sizeof(server));
 
     socklen_t server_len = sizeof(server);
 

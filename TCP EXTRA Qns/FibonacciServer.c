@@ -21,8 +21,10 @@ int main() {
 
     bind(sockfd, (struct sockaddr*)&server, sizeof(server));
     listen(sockfd, 1);
+    printf("Server waiting...\n");
 
     connfd = accept(sockfd, NULL, NULL);
+    printf("Client connected\n");
 
     while (1) {
         bzero(buffer, MAX);
