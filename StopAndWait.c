@@ -52,14 +52,10 @@ void sender() {
             p.seq = p.seq + 1;
 
             printf("SENDER: sent packet with seq NO:%d\n", p.seq);
-
             errorframe = rand() % 4;
-
-            // Message below is printed only if Error
-            // occured while sending Packet
             printf("%s\n", (errorframe == 0 ? "Error While sending Packet" : ""));
 
-            turn = 'r';  // Set next turn as Receiver for transmission
+            turn = 'r';
             flag = 1;
         }
     } else {
